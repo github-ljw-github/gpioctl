@@ -17,6 +17,8 @@ function test_read_gpio
   ./a.out "gpio1|gpio2|gpio7|gpio7"\
           "pin2 |pin3 |pin23|pin25"\
 
+  echo "read: test case 3"
+  ./a.out 1,2,7,7  2,3,23,25
 }
 
 function test_write_gpio
@@ -33,6 +35,8 @@ function test_write_gpio
           "pin2 |pin3 |pin23|pin25"\
           "val0 |val1 |val0 |val1"\
 
+  echo "write: test case 3"
+  ./a.out 2,2,7,7  2,3,23,25  0,1,0,1
 }
 
 test_init
